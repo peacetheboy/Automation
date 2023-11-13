@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JidEi8QYE3d7r8cdzwOrlQd/n3/VPA8/3VpN6xyPIBKPDoBa6H/VH4BCuGyHvTVDl4a8fnzz3GI0vGwT7KDSog==",
+  "dgSpecHash": "KFa8z4izNks8Wxuqx3qUbi2UkvZ+segN/UFjPXj9m+vztjUyYiovvo28+7yRZryOxhJJdXHHTsnYUxyYAtfPAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Documents\\GitHub\\Automation-PROJECT\\AutomationPrj\\AutomationPrj\\AutomationPrj.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
