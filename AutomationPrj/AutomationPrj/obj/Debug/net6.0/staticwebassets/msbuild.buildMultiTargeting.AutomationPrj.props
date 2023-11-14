@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AutomationPrj.props" />
+</Project>

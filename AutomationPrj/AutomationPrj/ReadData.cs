@@ -20,7 +20,7 @@ namespace AutomationPrj
                 string jsonContent = File.ReadAllText(jsonFilePath);
 
                 // Create an SQL table
-                string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=MYDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"; // Replace with your SQL Server connection string
+                string connectionString = "Integrated Security=SSPI;Persist Security Info=False;User ID=\"\";Initial Catalog=CCGDB; TrustServerCertificate=true; Data Source=\"\""; // Replace with your SQL Server connection string
                 string tableName = "Table"; 
                 CreateTable(connectionString, tableName);
 
