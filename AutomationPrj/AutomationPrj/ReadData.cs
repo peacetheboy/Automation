@@ -16,7 +16,7 @@ namespace AutomationPrj
             try
             {
                 // Step 1: Read data from a JSON file
-                string jsonFilePath = "C:\\Users\\user\\Documents\\GitHub\\Automation-PROJECT"; // Replace with your JSON file path
+                string jsonFilePath = "C:\\Users\\itstudent\\source\\repos\\Automation"; // Replace with your JSON file path
                 string jsonContent = File.ReadAllText(jsonFilePath);
 
                 // Create an SQL table
@@ -44,7 +44,7 @@ namespace AutomationPrj
             {
                 connection.Open();
 
-                using (SqlCommand command = new SqlCommand($"CREATE TABLE {tableName} (Id INT PRIMARY KEY, Name NVARCHAR(255), Age INT)", connection))
+                using (SqlCommand command = new SqlCommand($"CREATE TABLE {tableName} (name VARCHAR(255), phone VARCHAR(10), email VARCHAR(255), address VARCHAR(255), postalZip VARCHAR(255), region VARCHAR(255), country VARCHAR(255), list VARCHAR(255), numberrange VARCHAR(255), currency VARCHAR(255), alphanumeric VARCHAR(255)", connection))
                 {
                     command.ExecuteNonQuery();
                 }
@@ -62,11 +62,19 @@ namespace AutomationPrj
 
                 foreach (JObject jsonObject in jsonArray)
                 {
-                    using (SqlCommand command = new SqlCommand($"INSERT INTO {tableName} (Id, Name, Age) VALUES (@Id, @Name, @Age)", connection))
+                    using (SqlCommand command = new SqlCommand($"INSERT INTO {tableName} (name, phone, email, address, postalZip, region, country, list, numberrange, currency, alphanumeric ) VALUES (@name, @phone, @email, @address, @postalZip, @region, @country, @list, @numberrange, @currency, @alphanumeric)", connection))
                     {
-                        command.Parameters.AddWithValue("@Id", (int)jsonObject["Id"]);
-                        command.Parameters.AddWithValue("@Name", (string)jsonObject["Name"]);
-                        command.Parameters.AddWithValue("@Age", (int)jsonObject["Age"]);
+                        command.Parameters.AddWithValue("@name", (int)jsonObject["name"]);
+                        command.Parameters.AddWithValue("@phone", (string)jsonObject["phone"]);
+                        command.Parameters.AddWithValue("@email", (int)jsonObject["email"]);
+                        command.Parameters.AddWithValue("@address", (int)jsonObject["address"]);
+                        command.Parameters.AddWithValue("@postalZip", (string)jsonObject["postalZip"]);
+                        command.Parameters.AddWithValue("@region", (int)jsonObject["region"]);
+                        command.Parameters.AddWithValue("@country", (string)jsonObject["country"]);
+                        command.Parameters.AddWithValue("@list", (int)jsonObject["list"]);
+                        command.Parameters.AddWithValue("@numberrange", (int)jsonObject["numberrange"]);
+                        command.Parameters.AddWithValue("@currency", (string)jsonObject["currency"]);
+                        command.Parameters.AddWithValue("@alphanumeric", (int)jsonObject["alphanumeric"]);
 
                         command.ExecuteNonQuery();
                     }
